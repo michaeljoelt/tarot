@@ -20,6 +20,11 @@ function displayCard(card) {
 
     const divFront = document.createElement('div')
     divFront.addEventListener('click', flipCard)
+    divFront.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            flipCard(e)
+        }
+    })
     isFront = 1
     divFront.classList.add("front")
     divFront.setAttribute("tabindex", "0")
@@ -39,6 +44,11 @@ function displayCard(card) {
     divBack.classList.add("hide");
     divBack.setAttribute("tabindex", "0")
     divBack.addEventListener('click', flipCard)
+    divBack.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            flipCard(e)
+        }
+    })
 
     const paragraph1 = document.createElement('p')
     paragraph1.innerText = `Meaning:  \r\n${card.meaning_up}`
@@ -61,16 +71,11 @@ function displayCard(card) {
     section.appendChild(fragment)
 
     divFront.focus()
-
 }
 
 function flipCard() {
     console.log("flipping")
-    if (isFront) {
-        isFront = 0
-    } else {
-        isFront = 1
-    }
+    isFront = isFront ? 0 : 1
 
     document.querySelector('.back').classList.toggle("hide")
     document.querySelector('.front').classList.toggle("hide")
