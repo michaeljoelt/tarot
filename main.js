@@ -51,7 +51,7 @@ function displayCard(card) {
     })
 
     const paragraph1 = document.createElement('p')
-    paragraph1.innerText = `Meaning:  \r\n${card.meaning_up}`
+    paragraph1.innerText = `${card.name} Meaning:  \r\n${card.meaning_up}`
     divBack.appendChild(paragraph1)
 
     const paragraph2 = document.createElement('p')
