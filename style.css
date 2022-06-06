@@ -39,6 +39,14 @@ button {
 }
 
 div {
+	width: 50vw;
+
+	padding: 3rem;
+	border: .1rem solid #c45cb3;
+	border-radius: .5rem;
+	background-color: #fae6f7;
+	color: #c45cb3;
+
 	cursor: pointer;
 
 	margin: auto;
@@ -46,13 +54,6 @@ div {
 	display: flex;
 	flex-flow: column wrap;
 	align-items: start;
-
-	width: 45vw;
-	padding: 3rem;
-	border: .1rem solid #c45cb3;
-	border-radius: .5rem;
-	background-color: #fae6f7;
-	color: #c45cb3;
 }
 
 div p {
@@ -66,9 +67,8 @@ div h2 {
 div:focus,
 div:hover {
 	outline: .15rem solid #c45cb3;
-	background-color: #fce0f7;
+	background-color: #fcdaf6;
 }
-
 
 
 button:focus,
