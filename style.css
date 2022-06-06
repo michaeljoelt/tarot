@@ -17,9 +17,7 @@ main{
 	transform: scaleY(-1);
 }
 
-div p {
-	text-align: left;
-}
+
 
 button {
 	font-family: 'Yusei Magic', sans-serif;
@@ -61,7 +59,19 @@ div {
 	color: white; */
 }
 
-div:focus, button:focus {
+div p {
+	text-align: left;
+}
+
+div h2 {
+	margin-top: 0;
+}
+
+div:focus {
+	outline: .1rem solid #c45cb3;
+}
+
+button:focus {
 	outline: .2rem solid #964688;	
 }
 
@@ -72,7 +82,7 @@ div img, div h2 {
 img {
 	/* border: .5rem solid white;
 	border-radius: .4rem; */
-	width: 15vw;
+	width: 12vw;
 }
 
 .hide{
