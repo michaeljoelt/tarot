@@ -73,7 +73,7 @@ function displayCard(card) {
     divFront.focus()
 }
 
-function flipCard() {
+function flipCard(event) {
     console.log("flipping")
     isFront = isFront ? 0 : 1
 
@@ -81,7 +81,9 @@ function flipCard() {
     document.querySelector('.front').classList.toggle("hide")
 
     console.log(`isFront: ${isFront}`)
-    document.querySelector('div:not(.hide)').focus()
+    if (event.type == 'keypress') {
+        document.querySelector('div:not(.hide)').focus()
+    }
 }
 
 
