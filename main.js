@@ -22,7 +22,7 @@ function displayCard(card) {
     divFront.addEventListener('click', flipCard)
     isFront = 1
     divFront.classList.add("front")
-
+    divFront.setAttribute("tabindex", "0")
     const heading = document.createElement('h2')
     heading.innerText = isReversed ? `${card.name} (reversed)` : card.name
     divFront.appendChild(heading)
@@ -37,19 +37,19 @@ function displayCard(card) {
     const divBack = document.createElement('div')
     divBack.classList.add("back");
     divBack.classList.add("hide");
+    divBack.setAttribute("tabindex", "0")
     divBack.addEventListener('click', flipCard)
 
     const paragraph1 = document.createElement('p')
-    // paragraph.innerText = isReversed ? card.meaning_rev : card.meaning_up
-    paragraph1.innerText = card.meaning_up
+    paragraph1.innerText = `Meaning:  \r\n${card.meaning_up}`
     divBack.appendChild(paragraph1)
 
     const paragraph2 = document.createElement('p')
-    paragraph2.innerText = `Reverse: ${card.meaning_rev}`
+    paragraph2.innerText = `Reverse Meaning:  \r\n${card.meaning_rev}`
     divBack.appendChild(paragraph2)
 
     const paragraph3 = document.createElement('p')
-    paragraph3.innerText = card.desc
+    paragraph3.innerText = `Image Description: \r\n${card.desc}`
     divBack.appendChild(paragraph3)
 
     const fragment = document.createDocumentFragment()
@@ -60,13 +60,14 @@ function displayCard(card) {
     section.innerHTML = ""
     section.appendChild(fragment)
 
+    divFront.focus()
+
 }
 
 function flipCard() {
     console.log("flipping")
     if (isFront) {
         isFront = 0
-
     } else {
         isFront = 1
     }
@@ -75,6 +76,7 @@ function flipCard() {
     document.querySelector('.front').classList.toggle("hide")
 
     console.log(`isFront: ${isFront}`)
+    document.querySelector('div:not(.hide)').focus()
 }
 
 

@@ -9,17 +9,17 @@ html{
 main{
 	font-family: 'Yusei Magic', sans-serif;
 	font-size: 2rem;
+	text-align: center;
+	color: #c45cb3;
 }
 
 .reverse {
 	transform: scaleY(-1);
 }
 
-h1,h2{
-	text-align: center;
-	color: #c45cb3;
+div p {
+	text-align: left;
 }
-
 
 button {
 	font-family: 'Yusei Magic', sans-serif;
@@ -61,13 +61,17 @@ div {
 	color: white; */
 }
 
+div:focus, button:focus {
+	outline: .2rem solid #964688;	
+}
+
 div img, div h2 {
 	align-self: center;
 }
 
 img {
-	border: .4rem solid #c45cb3;
-	border-radius: .4rem;
+	/* border: .5rem solid white;
+	border-radius: .4rem; */
 	width: 15vw;
 }
 
