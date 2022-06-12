@@ -6,7 +6,7 @@ Pulls a random tarot card from the Rider-Waite Deck. Completely clientside using
 
 ## Contributing
 You can participate in this project through many ways. Here are some ideas below:
-- [Work on an issue](https://github.com/michaeljoelt/tarot/issues) - **Please comment on the issue before you start working on it to keep others in the loop. **
+- [Work on an issue](https://github.com/michaeljoelt/tarot/issues) - **Please comment on the issue before you start working on it to let everyone know.**
 - [Submit a new issue](https://github.com/michaeljoelt/tarot/issues) - If you notice anything that should change when playing with the [app](https://read-tarot.netlify.app/), please create a new issue for it! Please make sure the issue doesn't already exist.
 - [Participate in discussion](https://github.com/michaeljoelt/tarot/discussions) - Help brainstorm, get to know other contributors, etc.
 
