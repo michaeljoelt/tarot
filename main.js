@@ -14,18 +14,18 @@ function selectCard(event) {
 
     // Filter the deck
     const userFilter = getFilter()
-    deck = deck.filter((card) => (userFilter.includes(card.type) || userFilter.includes(card.suit)) ? true : false)
+    const filteredDeck = deck.filter((card) => (userFilter.includes(card.type) || userFilter.includes(card.suit)) ? true : false)
 
-    // Returns a random integer based on deck length
-    const randomNumber = Math.floor(Math.random() * deck.length)
-    const card = deck[randomNumber]
+    // Returns a random integer based on filteredDeck length
+    const randomNumber = Math.floor(Math.random() * filteredDeck.length)
+    const card = filteredDeck[randomNumber]
 
     // Check if card is drawn reversed or not (if filter allows it)
     const isReversed = userFilter.includes("reversals") ? Math.floor(Math.random() * 2) : 0
 
     // Prints all data to console for testing
     console.log(
-        `Drawing random card from deck. \n(Filter: ${userFilter} | Deck size: ${deck.length}/78)
+        `Drawing random card from deck. \n(Filter: ${userFilter} | Deck size: ${filteredDeck.length}/${deck.length})
         \nCard drawn: ${card.name} ${isReversed?"(reversed)":""}
         \nMeaning: ${card.meaning_up}
         \nReverse Meaning: ${card.meaning_rev}
