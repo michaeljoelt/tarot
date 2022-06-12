@@ -1,7 +1,3 @@
-/* img {
-	transform: scaleY(1);
-} */
-
 html {
 	font-size: 62.5%;
 }
@@ -13,11 +9,58 @@ main {
 	color: #c45cb3;
 }
 
-.reverse {
-	transform: scaleY(-1);
+/*********************
+ Filter / Checkboxes
+*********************/
+
+fieldset {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	border: none;
+	font-size: 2rem;
 }
 
-button {
+fieldset div{ /*checkbox+label combos*/
+	margin: 1rem;
+	cursor: pointer;
+	
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+}
+
+input[type="checkbox"],label{
+	cursor: pointer;
+	accent-color: #c45cb3;
+}
+
+input[type="checkbox"]{
+	transform: scale(1.2);
+	margin-right: .7rem;
+}
+
+input[type="checkbox"]:focus + label,
+input[type="checkbox"]:hover + label {
+	accent-color: #b345a0;
+	color: #b345a0;
+}
+
+input[type="checkbox"]:focus,
+input[type="checkbox"]:hover {
+	outline: .15rem solid #964688;
+	accent-color: #b345a0;
+	color: #b345a0;
+}
+
+label {
+	margin-right: 1rem;
+}
+
+/**************
+ Submit Button
+***************/
+input[type="submit"] {
 	font-family: 'Yusei Magic', sans-serif;
 	color: white;
 
@@ -35,20 +78,31 @@ button {
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
-
 }
 
-div {
-	width: 50vw;
+input[type="submit"]:focus,
+input[type="submit"]:hover {
+	outline: .2rem solid #964688;
+	color: #ffeefc;
+	background-color: #b345a0;
+}
 
+input[type="submit"]:active {
+	outline: .15rem solid #964688;
+	transform: scale(.97);
+}
+
+/****************************
+ Section that displays cards
+*****************************/
+.cards div {
+	width: 50vw;
 	padding: 3rem;
 	border: .1rem solid #c45cb3;
 	border-radius: .5rem;
 	background-color: #fae6f7;
 	color: #c45cb3;
-
 	cursor: pointer;
-
 	margin: auto;
 
 	display: flex;
@@ -56,41 +110,34 @@ div {
 	align-items: start;
 }
 
-div p {
+.cards div p {
 	text-align: left;
 }
 
-div h2 {
+.cards div h2 {
 	margin-top: 0;
 }
 
-div:focus,
-div:hover {
+.cards div:focus,
+.cards div:hover {
 	outline: .15rem solid #c45cb3;
 	background-color: #ffe4fa;
 }
 
-
-button:focus,
-button:hover {
-	outline: .2rem solid #964688;
-	color: #ffeefc;
-	background-color: #b345a0;
-}
-
-button:active {
-	outline: .15rem solid #964688;
-	transform: scale(.97);
-}
-
-div img,
-div h2 {
+.cards div img,
+.cards div h2 {
 	align-self: center;
 }
 
-img {
-	/* border: .5rem solid white;
-	border-radius: .4rem; */
+.cards .hide {
+	display: none;
+}
+
+.cards .reverse {
+	transform: scaleY(-1);
+}
+
+.cards img {
 	width: 12vw;
 	-moz-box-shadow: .1rem .2rem .3rem rgba(0,0,0,.5);
 	-webkit-box-shadow: .1rem .2rem .3rem rgba(0,0,0,.5);
@@ -98,14 +145,9 @@ img {
 	border-radius: .3rem;
 }
 
-.hide {
-	display: none;
-}
-
-footer {
-	font-size: 1.3rem;
-}
-
+/***********************
+ Mobile/Tablet Settings
+***********************/
 @media only all and (max-width: 800px) {
 	div {
 		width: 80vw;
