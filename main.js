@@ -11,7 +11,7 @@ async function getDeck() {
 
 document.querySelector('#draw').addEventListener('click', selectCard);
 
-function selectCard(event) {
+async function selectCard(event) {
   event.preventDefault(); //prevents submit button("Draw") from refreshing page
 
   // Filter the deck
@@ -43,16 +43,17 @@ function selectCard(event) {
   );
   displayCard(card, isReversed);
   //   Brandon-Schefstad - 06/12
-  //   focusElement('chosenCard');
-  setTimeout(() => {
+  //   setTimeout(() => {
+  //     document
+  //       .getElementById('chosenCard')
+  //       .scrollIntoView(true, { block: 'start' });
+  //   }, 30);
+  if (document.getElementById('chosenCard')) {
     document
       .getElementById('chosenCard')
       .scrollIntoView(true, { block: 'start' });
-  }, 30);
+  }
 }
-//   Brandon-Schefstad - 06/12
-// Helper function to scroll to
-function focusElement(id) {}
 
 function getFilter() {
   let selectedCheckboxes = [];
@@ -101,7 +102,8 @@ function displayCard(card, isReversed) {
     heading.innerText = isReversed ? `${card.name} (reversed)` : card.name;
     divFront.appendChild(heading);
 
-    const img = document.getElementById('chosenCard');
+    const img = document.createElement('img');
+    img.setAttribute('id', 'chosenCard');
     img.src = card.image;
     if (isReversed) {
       img.classList.add('reverse');
