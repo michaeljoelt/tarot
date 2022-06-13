@@ -182,5 +182,6 @@ input[type='submit']:active {
   }
   #chosenCard {
     width: 80%;
+    height: 60%;
   }
 }
