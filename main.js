@@ -51,7 +51,7 @@ async function selectCard(event) {
   if (document.getElementById('chosenCard')) {
     document
       .getElementById('chosenCard')
-      .scrollIntoView(true, { block: 'end' });
+      .scrollIntoView(true, { block: 'start' });
   }
 }
 
