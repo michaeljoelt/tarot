@@ -42,6 +42,8 @@ async function selectCard(event) {
         \nImage Description: ${card.desc}`
   );
   displayCard(card, isReversed);
+  //   Brandon Schefstad 06/13
+  //   Most consistent way to scroll to card. scrollIntoView() was being very buggy only working 30% of the time.
 }
 
 function getFilter() {
@@ -73,12 +75,21 @@ function displayCard(card, isReversed) {
     const section = document.querySelector('#drawing');
     section.innerHTML = '';
     section.appendChild(fragment);
-    //   Brandon Schefstad 06/13
-    //   Trying SIV again.
+
+    // Brandon Schefstad 06/14
+    // Scrolls most consistently, console logs where the scroll will be brought to on the screen as a numerical Y-value.
     if (deck) {
-      const chosenCard = document.getElementById('chosenCard');
-      chosenCard.scrollIntoView(true);
-      console.log('YES');
+      const y =
+        document.getElementById('chosenCard').offsetTop - window.innerHeight;
+      console.log(
+        `Scrolling to: ${
+          document.getElementById('chosenCard').offsetTop -
+          window.innerHeight / 2
+        }`
+      );
+      window.scrollTo({
+        top: y,
+      });
     }
   }
 
@@ -142,6 +153,5 @@ function flipCard(event) {
   document.querySelector('.front').classList.toggle('hide');
   if (event.type == 'keypress') {
     document.querySelector('.cards div:not(.hide)').focus();
-    console.log('resetting');
   }
 }
