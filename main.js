@@ -47,10 +47,10 @@ function selectCard(event) {
 }
 //   Brandon-Schefstad - 06/12
 function focusElement(id) {
-  const spacing = document.createElement('section');
-  document.getElementById('drawing').append(spacing);
-  spacing.setAttribute('id', 'spacing');
-  document.getElementById(id).scrollIntoView(true, { block: 'end' });
+  //   const spacing = document.createElement('section');
+  //   document.getElementById('drawing').append(spacing);
+  //   spacing.setAttribute('id', 'spacing');
+  document.getElementById(id).scrollIntoView(true, { block: 'center' });
 }
 
 function getFilter() {
@@ -106,12 +106,10 @@ function displayCard(card, isReversed) {
     // Brandon-Schefstad - 06/12
     // ###########################################
     img.setAttribute('id', 'chosenCard');
-
     if (isReversed) {
       img.classList.add('reverse');
     }
     divFront.appendChild(img);
-
     return divFront;
   }
 

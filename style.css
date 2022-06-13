@@ -174,4 +174,10 @@ input[type='submit']:active {
   #draw {
     grid-column: 1 / span 2;
   }
+  #drawing {
+    margin-bottom: 15rem;
+  }
+  #chosenCard {
+    width: 60%;
+  }
 }
