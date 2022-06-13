@@ -45,7 +45,9 @@ function selectCard(event) {
   //   Brandon-Schefstad - 06/12
   //   focusElement('chosenCard');
   setTimeout(() => {
-    document.getElementById(id).scrollIntoView(true, { block: 'start' });
+    document
+      .getElementById('chosenCard')
+      .scrollIntoView(true, { block: 'start' });
   }, 30);
 }
 //   Brandon-Schefstad - 06/12
