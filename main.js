@@ -47,10 +47,12 @@ function selectCard(event) {
 }
 //   Brandon-Schefstad - 06/12
 function focusElement(id) {
-  const spacing = document.createElement('section');
-  document.getElementById('drawing').append(spacing);
-  spacing.setAttribute('id', 'spacing');
-  document.getElementById(id).scrollIntoView(true, { block: 'center' });
+  //   const spacing = document.createElement('section');
+  //   document.getElementById('drawing').append(spacing);
+  //   spacing.setAttribute('id', 'spacing');
+  setTimeout(() => {
+    document.getElementById(id).scrollIntoView(true, { block: 'start' });
+  }, 30);
 }
 
 function getFilter() {

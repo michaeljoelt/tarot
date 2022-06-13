@@ -179,10 +179,10 @@ input[type='submit']:active {
   #draw {
     grid-column: 1 / span 2;
   }
-  #drawing {
+  /* #drawing {
     margin-bottom: 25rem;
     width: 100%;
-  }
+  } */
   #chosenCard {
     width: 80%;
     height: 60%;
