@@ -43,14 +43,14 @@ function selectCard(event) {
   );
   displayCard(card, isReversed);
   //   Brandon-Schefstad - 06/12
-  focusElement('chosenCard');
-}
-//   Brandon-Schefstad - 06/12
-function focusElement(id) {
+  //   focusElement('chosenCard');
   setTimeout(() => {
     document.getElementById(id).scrollIntoView(true, { block: 'start' });
   }, 30);
 }
+//   Brandon-Schefstad - 06/12
+// Helper function to scroll to
+function focusElement(id) {}
 
 function getFilter() {
   let selectedCheckboxes = [];
