@@ -42,14 +42,10 @@ async function selectCard(event) {
         \nImage Description: ${card.desc}`
   );
   displayCard(card, isReversed);
-  //   Brandon-Schefstad - 06/12
-  //   setTimeout(() => {
-  //     document
-  //       .getElementById('chosenCard')
-  //       .scrollIntoView(true, { block: 'start' });
-  //   }, 30);
-  if (document.getElementById('chosenCard')) {
+  //
+  if (deck) {
     document.getElementById('chosenCard').scrollIntoView();
+    console.log('boo');
   }
 }
 
@@ -82,7 +78,7 @@ function displayCard(card, isReversed) {
     const section = document.querySelector('#drawing');
     section.innerHTML = '';
     section.appendChild(fragment);
-    document.querySelector('div.front').focus();
+    // document.querySelector('div.front').focus();
   }
 
   function createFrontOfCard() {
@@ -101,7 +97,10 @@ function displayCard(card, isReversed) {
     divFront.appendChild(heading);
 
     const img = document.createElement('img');
+    // Brandon Schefstad 06/12
+    // Adds ID for scrollIntoView() conditional at bottom of selectCard()
     img.setAttribute('id', 'chosenCard');
+    //
     img.src = card.image;
     if (isReversed) {
       img.classList.add('reverse');
@@ -141,7 +140,7 @@ function flipCard(event) {
   console.log('*flipping card*');
   document.querySelector('.back').classList.toggle('hide');
   document.querySelector('.front').classList.toggle('hide');
-  if (event.type == 'keypress') {
-    document.querySelector('.cards div:not(.hide)').focus();
-  }
+  //   if (event.type == 'keypress') {
+  //     document.querySelector('.cards div:not(.hide)').focus();
+  //   }
 }

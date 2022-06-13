@@ -1,7 +1,10 @@
 html {
+}
+html {
+  height: 100%;
+  overflow: auto;
   font-size: 62.5%;
 }
-
 main {
   font-family: 'Yusei Magic', sans-serif;
   font-size: 2rem;
@@ -155,6 +158,7 @@ input[type='submit']:active {
  Mobile/Tablet Settings
 ***********************/
 @media only all and (max-width: 800px) {
+  /* These changes really improved the layout on mobile*/
   body {
     max-width: 100vw;
   }
