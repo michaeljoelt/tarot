@@ -42,7 +42,8 @@ async function selectCard(event) {
         \nImage Description: ${card.desc}`
   );
   displayCard(card, isReversed);
-  //
+  //   Brandon Schefstad 06/13
+  //   Most consistent way to scroll to card. scrollIntoView() was being very buggy only working 30% of the time.
   if (await deck) {
     const y =
       document.getElementById('chosenCard').offsetTop -
@@ -51,7 +52,6 @@ async function selectCard(event) {
       top: y,
       left: 0,
     });
-    console.log('hiss');
   }
 }
 
@@ -103,10 +103,9 @@ function displayCard(card, isReversed) {
     divFront.appendChild(heading);
 
     const img = document.createElement('img');
-    // Brandon Schefstad 06/12
-    // Adds ID for scrollIntoView() conditional at bottom of selectCard()
+    // Brandon Schefstad 06/13
+    // Adds ID for conditional at bottom of selectCard()
     img.setAttribute('id', 'chosenCard');
-    //
     img.src = card.image;
     if (isReversed) {
       img.classList.add('reverse');
