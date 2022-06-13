@@ -82,7 +82,7 @@ function displayCard(card, isReversed) {
     const section = document.querySelector('#drawing');
     section.innerHTML = '';
     section.appendChild(fragment);
-    // document.querySelector('div.front').focus();
+    document.querySelector('div.front').focus();
   }
 
   function createFrontOfCard() {
@@ -142,6 +142,6 @@ function flipCard(event) {
   document.querySelector('.back').classList.toggle('hide');
   document.querySelector('.front').classList.toggle('hide');
   if (event.type == 'keypress') {
-    // document.querySelector('.cards div:not(.hide)').focus();
+    document.querySelector('.cards div:not(.hide)').focus();
   }
 }
