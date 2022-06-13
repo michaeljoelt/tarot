@@ -19,6 +19,7 @@ fieldset {
   justify-content: center;
   border: none;
   font-size: 2rem;
+  width: 65%;
 }
 
 fieldset div {
@@ -161,5 +162,16 @@ input[type='submit']:active {
 
   img {
     width: 30vw;
+  }
+  fieldset.filter {
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+    gap: 1rem;
+  }
+  div > label {
+    font-size: 1.2rem;
+  }
+  #draw {
+    grid-column: 1 / span 2;
   }
 }
