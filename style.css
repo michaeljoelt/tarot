@@ -175,6 +175,7 @@ input[type='submit']:active {
   }
   #drawing {
     margin-bottom: 25rem;
+    width: 100%;
   }
   #chosenCard {
     width: 100%;
