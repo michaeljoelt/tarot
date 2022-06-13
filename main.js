@@ -47,7 +47,8 @@ async function selectCard(event) {
     // document.getElementById('chosenCard').scrollIntoView(true);
     // console.log('boo');
     const y =
-      document.getElementById('chosenCard').offsetTop - window.innerHeight / 2;
+      document.getElementById('chosenCard').offsetTop -
+      window.innerHeight / 3.3;
     window.scrollTo({
       top: y,
       left: 0,
