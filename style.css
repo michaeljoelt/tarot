@@ -160,7 +160,7 @@ input[type='submit']:active {
   }
   .cards div {
     width: 80vw;
-    padding: 1.5rem;
+    padding: 2rem;
   }
   img {
     width: 30vw;
@@ -181,6 +181,6 @@ input[type='submit']:active {
     width: 100%;
   }
   #chosenCard {
-    width: 100%;
+    width: 80%;
   }
 }
