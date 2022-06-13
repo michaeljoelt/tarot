@@ -158,7 +158,10 @@ input[type='submit']:active {
   div {
     width: 80vw;
   }
-
+  .cards div {
+    width: 80vw;
+    padding: 1.5rem;
+  }
   img {
     width: 30vw;
   }
