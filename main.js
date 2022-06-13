@@ -84,7 +84,7 @@ function displayCard(card, isReversed) {
       console.log(
         `Scrolling to: ${
           document.getElementById('chosenCard').offsetTop -
-          window.innerHeight / 2
+          window.innerHeight / 3.3
         }`
       );
       window.scrollTo({
