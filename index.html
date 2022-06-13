@@ -1,59 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>Tarot Reading</title>
+  </head>
 
-	<link rel="stylesheet" href="style.css">
-	<title>Tarot Reading</title>
-</head>
+  <body>
+    <main>
+      <h1>Tarot Reading</h1>
+      <p>Draw a card, then flip it over to read more about it!</p>
+      <form>
+        <fieldset class="filter">
+          <div>
+            <input type="checkbox" id="reversals" name="reversals" checked />
+            <label for="reversals">Reversals</label>
+          </div>
+          <div>
+            <input type="checkbox" id="major" name="major" checked />
+            <label for="major">Major Arcana</label>
+          </div>
+          <div>
+            <input type="checkbox" id="wands" name="wands" checked />
+            <label for="wands">Wands</label>
+          </div>
+          <div>
+            <input type="checkbox" id="pentacles" name="pentacles" checked />
+            <label for="pentacles">Pentacles</label>
+          </div>
+          <div>
+            <input type="checkbox" id="swords" name="swords" checked />
+            <label for="swords">Swords</label>
+          </div>
 
-<body>
-	<main>
-		<h1>Tarot Reading</h1>
-		<p>Draw a card, then flip it over to read more about it!</p>
-		<form>
-			<fieldset class="filter">
-				<div>
-					<input type="checkbox" id="reversals" name="reversals" checked>
-					<label for="reversals">Reversals</label>
-				</div>
-				<div>
-					<input type="checkbox" id="major" name="major" checked>
-					<label for="major">Major Arcana</label>
-				</div>
-				<div>
-					<input type="checkbox" id="wands" name="wands" checked>
-					<label for="wands">Wands</label>
-				</div>
-				<div>
+          <div>
+            <input type="checkbox" id="cups" name="cups" checked />
+            <label for="cups">Cups</label>
+          </div>
+        </fieldset>
+        <input id="draw" type="submit" aria-label="draw a card" value="Draw" />
+      </form>
+      <section id="drawing" class="cards"></section>
+    </main>
 
-					<input type="checkbox" id="pentacles" name="pentacles" checked>
-					<label for="pentacles">Pentacles</label>
-
-				</div>
-				<div>
-					<input type="checkbox" id="swords" name="swords" checked>
-					<label for="swords">Swords</label>
-				</div>
-
-				<div>
-					<input type="checkbox" id="cups" name="cups" checked>
-					<label for="cups">Cups</label>
-				</div>
-			</fieldset>
-			<input id="draw" type="submit" aria-label="draw a card" value="Draw">
-		</form>
-		<section id="drawing" class="cards"></section>
-	</main>
-
-	<script type="text/javascript" src="main.js"></script>
-
-</body>
-
+    <script type="text/javascript" src="main.js"></script>
+  </body>
 </html>
