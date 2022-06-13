@@ -44,8 +44,6 @@ async function selectCard(event) {
   displayCard(card, isReversed);
   //
   if (await deck) {
-    // document.getElementById('chosenCard').scrollIntoView(true);
-    // console.log('boo');
     const y =
       document.getElementById('chosenCard').offsetTop -
       window.innerHeight / 3.3;
@@ -86,7 +84,7 @@ function displayCard(card, isReversed) {
     const section = document.querySelector('#drawing');
     section.innerHTML = '';
     section.appendChild(fragment);
-    // document.querySelector('div.front').focus();
+    document.querySelector('div.front').focus();
   }
 
   function createFrontOfCard() {
@@ -148,7 +146,7 @@ function flipCard(event) {
   console.log('*flipping card*');
   document.querySelector('.back').classList.toggle('hide');
   document.querySelector('.front').classList.toggle('hide');
-  //   if (event.type == 'keypress') {
-  //     document.querySelector('.cards div:not(.hide)').focus();
-  //   }
+  if (event.type == 'keypress') {
+    document.querySelector('.cards div:not(.hide)').focus();
+  }
 }
