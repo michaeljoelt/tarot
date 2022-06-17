@@ -149,11 +149,39 @@ input[type="submit"]:active {
  Mobile/Tablet Settings
 ***********************/
 @media only all and (max-width: 800px) {
-	div {
-		width: 80vw;
+	body{
+		margin: 0;
 	}
-
+	.description{
+		margin: 8px;
+		font-size: 1.2em;
+	}
 	img {
 		width: 30vw;
+	}
+	fieldset{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	fieldset div{
+		margin-right: .2rem;		
+	}
+	label{
+		margin-left: 0;
+		font-size: 1em;
+	}
+	.cards div{
+		margin: 8px;
+		width: auto;
+
+	}
+	.cards div > h2{
+		font-size: 2em;
+	}
+	.front img{
+		width: 60vw;
+	}
+	.back p{
+		font-size: 1.3em;
 	}
 }
