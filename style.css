@@ -144,6 +144,9 @@ input[type="submit"]:active {
 	box-shadow: .1rem .2rem .3rem rgba(0,0,0,.5);
 	border-radius: .3rem;
 }
+.error-message{
+	color: rgb(255, 0, 76);
+}
 
 /***********************
  Mobile/Tablet Settings

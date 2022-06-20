@@ -12,9 +12,19 @@ document.querySelector("#draw").addEventListener('click', selectCard)
 function selectCard(event) {
     event.preventDefault() //prevents submit button("Draw") from refreshing page
 
+    let errorArea = document.querySelector(".error-message")
+    errorArea.innerHTML = ""
+    let cardArea = document.querySelector("#drawing")
+    cardArea.innerHTML=""
+
     // Filter the deck
     const userFilter = getFilter()
     const filteredDeck = deck.filter((card) => (userFilter.includes(card.type) || userFilter.includes(card.suit)) ? true : false)
+    
+    if(filteredDeck.length === 0){
+        errorArea.innerHTML = "There are no cards to draw from. Select more filters/suits."
+        return;
+    }
 
     // Returns a random integer based on filteredDeck length
     const randomNumber = Math.floor(Math.random() * filteredDeck.length)
